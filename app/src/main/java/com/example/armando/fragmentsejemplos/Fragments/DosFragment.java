@@ -1,5 +1,6 @@
 package com.example.armando.fragmentsejemplos.Fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.armando.fragmentsejemplos.BasesDatos.GestorAlbums;
 import com.example.armando.fragmentsejemplos.R;
 import com.example.armando.fragmentsejemplos.RecyclerViewMusica.AlbumAdaptador;
 import com.example.armando.fragmentsejemplos.RecyclerViewMusica.DetalleMusica;
@@ -48,8 +50,11 @@ public class DosFragment extends Fragment {
     }
 
     private void IniciarlizarListaContactos() {
-        albums = new ArrayList<>();
 
+        GestorAlbums gestorAlbums = new GestorAlbums(this.getActivity());
+        albums = gestorAlbums.AsignarAlbums();
+
+       /*
         albums.add(new DetalleMusica("Rola el Deep","Adele","Rolando",R.drawable.adele));
         albums.add(new DetalleMusica("beatles Song","Beatles","Let it be",R.drawable.beatles));
         albums.add(new DetalleMusica("Elvis 60","Elvis","Jailhouse Rock",R.drawable.elvis));
@@ -58,6 +63,7 @@ public class DosFragment extends Fragment {
         albums.add(new DetalleMusica("Less Miserables","Basado en la Novela de Victor Hugo","I Dreamed a Dream",R.drawable.lesmiserables));
         albums.add(new DetalleMusica("Mi Cárcel","Marco Antonio Solis","Mi Cárcel",R.drawable.marcosolis));
         albums.add(new DetalleMusica("Elements of life","Tiesto","Elements of life",R.drawable.tiesto));
+       */
 
 
     }

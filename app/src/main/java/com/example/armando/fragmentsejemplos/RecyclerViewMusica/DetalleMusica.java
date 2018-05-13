@@ -6,6 +6,10 @@ public class DetalleMusica  {
     private String nombreCancion;
     private int fotoAlbum;
 
+    public DetalleMusica(){
+
+    }
+
 
     public DetalleMusica(String nombreAlbum, String artista, String nombreCancion, int fotoAlbum) {
         this.nombreAlbum = nombreAlbum;
